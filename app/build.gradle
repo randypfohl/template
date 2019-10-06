@@ -6,7 +6,7 @@ android {
     compileSdkVersion Versions.compileSdk
     buildToolsVersion Versions.buildToolsVersion
     defaultConfig {
-        applicationId "com.pfohl.template"
+        applicationId Config.applicationId
         minSdkVersion Versions.minSdk
         targetSdkVersion Versions.targetSdk
         versionCode 1
@@ -29,6 +29,19 @@ dependencies {
     implementation Kotlin.coroutinesCore
 
     implementation ArchComponents.coreKtx
+    implementation ArchComponents.androidxFragment
+    implementation ArchComponents.navFragmentKtx
+    implementation ArchComponents.navUiKtx
+
+    implementation Koin.core
+    implementation Koin.android
+
+    implementation Room.core
+    implementation Room.annotations
+    implementation Room.kotlinSupport
+    testImplementation Room.roomTesting
+
+    implementation Deps.retrofit
 
     implementation Deps.constraintLayoutX
 

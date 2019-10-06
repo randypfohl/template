@@ -33,6 +33,8 @@ object Versions {
     const val coroutine = "1.3.50"
     const val exifinterface = "1.0.0"
     const val uiAutomator = "2.2.0"
+    const val retrofit = "2.6.2"
+    const val room = "2.1.0"
 }
 
 object Kotlin {
@@ -75,6 +77,8 @@ object Deps {
 
     val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+
+    val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
 }
 
 object Espresso {
@@ -106,4 +110,11 @@ object Shimmer {
 
 object Exifinterface {
     const val exifInterface = "androidx.exifinterface:exifinterface:${Versions.exifinterface}"
+}
+
+object Room {
+    const val core = "androidx.room:room-runtime:${Versions.room}"
+    const val annotations = "androidx.room:room-compiler:${Versions.room}" // For Kotlin use kapt instead of annotationProcessor
+    const val kotlinSupport = "androidx.room:room-ktx:${Versions.room}"
+    const val roomTesting = "androidx.room:room-testing:${Versions.room}"
 }
