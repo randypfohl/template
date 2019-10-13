@@ -1,0 +1,38 @@
+apply plugin: "com.diffplug.gradle.spotless"
+
+buildscript {
+    apply from: 'versions.gradle'
+    addRepos(repositories)
+
+    configurations {
+        ktlint
+    }
+
+    dependencies {
+        classpath deps.android.android_gradle_plugin
+        classpath deps.kotlin.plugin
+        classpath deps.navigation.safe_args_plugin
+        classpath deps.spotless.plugin
+
+    }
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+}
+
+allprojects {
+    addRepos(repositories)
+}
+
+spotless {
+    kotlin {
+        ktlint(versions.ktlint)
+        target "**/*.kt"
+    }
+}
+
+task validate dependsOn "spotlessCheck"
+
