@@ -22,7 +22,7 @@ RUN dpkg --add-architecture i386 && \
     apt-get install -y git wget zip && \
     apt-get install -y software-properties-common && \
     apt-add-repository ppa:brightbox/ruby-ng && \
-    apt-get update && apt-get install --no-install-recommends -y build-essential git ruby2.3 ruby2.3-dev && \
+    apt-get update && apt-get install --no-install-recommends -y build-essential git ruby2.4 ruby2.4-dev && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     apt-get autoremove -y && apt-get clean
 
